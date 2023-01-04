@@ -1,0 +1,5 @@
+{
+    "markdown-image.local.path": "/docs/public/images",
+    "markdown-image.local.referencePath": "/images/${mdname}/",
+    "markdown-image.base.fileNameFormat": "${mdname}/${hash}"
+}
