@@ -19,6 +19,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
-          token: ${{ secrets.ACCESS_TOKEN }}
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
           branch: main
           repository-name: lesonky/lesonky.github.io
