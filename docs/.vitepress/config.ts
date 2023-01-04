@@ -18,4 +18,5 @@ export default defineConfig({
       copyright: "Copyright © 2022-12-06～present Wukoon",
     },
   },
+  outDir: '../dist'
 });
