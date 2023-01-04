@@ -19,7 +19,7 @@ hero:
       link: https://github.com/lesonky
     - theme: alt
       text: 关于我
-      link: /me/
+      link: https://www.wolai.com/wukoon/oWY8xUGBeTHLRk1SBuqmJL
 features:
   - icon: ⚡️ 
     title: 记录生活，记录学习
