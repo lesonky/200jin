@@ -7,13 +7,17 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@v4
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: main
-        FOLDER: dist
-        BUILD_SCRIPT: npm install && npm run build
+      - name: Install and Build 🔧 
+        run: |
+          npm ci
+          npm run build
+
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          token: ${{ secrets.ACCESS_TOKEN }}
+          branch: main
