@@ -21,4 +21,4 @@ jobs:
           folder: dist
           token: ${{ secrets.ACCESS_TOKEN }}
           branch: main
-          repository-name: lesonky.github.io
+          repository-name: lesonky/lesonky.github.io
