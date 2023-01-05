@@ -26,8 +26,8 @@ onMounted(() => {
       clientSecret: '3ca0002961f65038171d071bafc20ee21d52badf',// 自己的clientSecret
       admin: ['lesonky'], // GitHub repository 所有者
       labels: ['Gitalk'], // GitHub issue 的标签
-      createIssueManually: false, //如果当前页面没有相应的 isssue 且登录的用户属于 admin，则会自动创建 issue。如果设置为 true，则显示一个初始化页面，创建 issue 需要点击 init 按钮。
-      proxy: "https://vercel.younglina.top/github_access_token",
+      createIssueManually: true, //如果当前页面没有相应的 isssue 且登录的用户属于 admin，则会自动创建 issue。如果设置为 true，则显示一个初始化页面，创建 issue 需要点击 init 按钮。
+      // proxy: "https://vercel.younglina.top/github_access_token",
     })
     gitment.render('gitalk-page-container')
   }
