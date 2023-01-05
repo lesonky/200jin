@@ -21,14 +21,14 @@ onMounted(() => {
     if (container) {
       container.appendChild(s_div);
       const gitment = new Gitalk({
-        id: '${location.pathname.replace(/\W/g,"")}', // 可选。默认为 location.href
+        id: `${location.pathname.replace(/\W/g,"")}`, // 可选。默认为 location.href
         owner: 'lesonky', // GitHub repository 所有者
         repo: 'lesonky.github.io', // GitHub repository
         clientID: 'bf8a1315ff321257721a', // 自己的clientID
         clientSecret: '3ca0002961f65038171d071bafc20ee21d52badf', // 自己的clientSecret
         admin: ['lesonky'], // GitHub repository 所有者
-        labels: [{name:'Gitalk'}], // GitHub issue 的标签
-        createIssueManually: false, //如果当前页面没有相应的 isssue 且登录的用户属于 admin，则会自动创建 issue。如果设置为 true，则显示一个初始化页面，创建 issue 需要点击 init 按钮。
+        labels: ['Gitalk',`${location.pathname.replace(/\W/g,"")}`], // GitHub issue 的标签
+        createIssueManually: true, //如果当前页面没有相应的 isssue 且登录的用户属于 admin，则会自动创建 issue。如果设置为 true，则显示一个初始化页面，创建 issue 需要点击 init 按钮。
         // proxy: "https://vercel.younglina.top/github_access_token",
       });
       gitment.render('gitalk-page-container');
