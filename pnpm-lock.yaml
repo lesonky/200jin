@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  gitalk: lesonky/gitalk
+  gitalk: git://github.com/lesonky/gitalk.git
   sass: ^1.56.1
   vitepress: 1.0.0-alpha.30
   vue: ^3.2.45

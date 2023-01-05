@@ -9,6 +9,6 @@
     "build": "vitepress build docs"
   },
   "dependencies": {
-    "gitalk": "lesonky/gitalk"
+    "gitalk": "git://github.com/lesonky/gitalk.git"
   }
 }
