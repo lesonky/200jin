@@ -38,5 +38,4 @@ const initGitalk = () =>{
 }
 onMounted(initGitalk);
 
-
 </script>
