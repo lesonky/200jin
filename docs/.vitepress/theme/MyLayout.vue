@@ -21,7 +21,7 @@ onMounted(() => {
     if (container) {
       container.appendChild(s_div);
       const gitment = new Gitalk({
-        id: location.pathname, // 可选。默认为 location.href
+        id: '${location.pathname.replace(/\W/g,"")}', // 可选。默认为 location.href
         owner: 'lesonky', // GitHub repository 所有者
         repo: 'lesonky.github.io', // GitHub repository
         clientID: 'bf8a1315ff321257721a', // 自己的clientID

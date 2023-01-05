@@ -36,6 +36,10 @@ p img {
     margin-top: 2px;
 }
 
+.gt-container .gt-header-textarea{
+    background-color: var(--vp-c-brand-dimm) !important;
+}
+
 @media (max-width: 960px) {
     #app .image {
         margin-top: -75px;
