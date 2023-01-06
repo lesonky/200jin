@@ -31,7 +31,7 @@ ssh-keygen -f my_blog -t rsa -m pem -b 4096 -C "youremailhere@example.com" -N ""
 2. 在`.github`文件夹中添加一个`yml`文件,文件名随意
 ![图 4](/images/ci_blog/d244c34976e98218dba9be8a550eb9a33eac925164d66c913d544e7db806ffa9.png)  
 3. 添加脚本
-```yml
+```
 name: Blog Deploy
 permissions:
   contents: write
