@@ -13,7 +13,6 @@ export default function buildSidebar() {
           { text: 'Vitepress 搭建博客', link: '/daily/build_vitepress_blog' },
           { text: 'Github Pages 发布博客', link: '/daily/publish_blog' },
           { text: 'Github Actions 自动化部署', link: '/daily/ci_blog' },
-          { text: '自定义个性化域名', link: '/daily/cname_blog' },
           { text: '添加gitalk支持', link: '/daily/gitalk_blog' },
         ],
       },

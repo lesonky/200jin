@@ -25,5 +25,3 @@ jobs:
           ssh-key: ${{ secrets.DEPLOY_KEY }}
           branch: main
           repository-name: lesonky/lesonky.github.io
-        env:
-          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY}}
