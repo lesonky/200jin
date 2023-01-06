@@ -1,5 +1,14 @@
 {
     "markdown-image.local.path": "/docs/public/images",
     "markdown-image.local.referencePath": "/images/${mdname}/",
-    "markdown-image.base.fileNameFormat": "${mdname}/${hash}"
+    "markdown-image.base.fileNameFormat": "${mdname}/${hash}",
+    "emojisense.languages": {
+        "markdown": true,
+        "plaintext": {
+            "markupCompletionsEnabled": false,
+            "emojiDecoratorsEnabled": false
+        },
+        "scminput": true,
+        "git-commit": true
+    }
 }

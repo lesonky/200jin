@@ -1,9 +1,9 @@
 最近在折腾Vitepress博客，差不多搭建好了，感觉如果没有评论功能，总是有点缺憾的。由于博客本身是用github pages 部署的，所以用 gitalk 来做评论似乎是很理想的，但是这个配置过程十分的曲折，决定写下来，希望能帮到后来者吧。
 
-# 开始工作
+## 开始工作
 参考了一下文档[vitepress配置评论(gitalk)](https://juejin.cn/post/7146037234527895560),基本上能看明白，但是代码不是很全，需要自己折腾一下，我先抄一下文章，后面再把遇到的问题和解决的方法写上
 
-# 创建GitHub Application
+## 创建GitHub Application
 使用gitalk之前，得先创建[GitHub Application](https://github.com/settings/applications/new)，为了后续提供给gitalk的两个数据， `Client ID`和`Client secrets`，如下图
 
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4c9aba4ce7914ecfbcfea179207e0e43~tplv-k3u1fbpfcp-watermark.image?)
@@ -13,7 +13,7 @@
 2. Application新建好之后，要及时复制 `Client ID`和`Client secrets` 关闭之后，需要到如下路径去找
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b84e155379bd4edb823affe07f33a909~tplv-k3u1fbpfcp-watermark.image?)
 
-# 安装
+## 安装
 > 根据 gitalk 官方文档，有两种安装方式，但是我们只使用 npm 来安装
 
 **注意：**
@@ -39,7 +39,7 @@
   }
 }
 ```
-# 使用
+## 使用
 想要在所有文章下面使用，但是又不想每个文章里面都去初始化，我们需要利用 Layout 来实现
 
 在`.vitepress`下面新建一个`theme`的文件夹，创建两个文件`index.js`和`MyLayout.vue`，这个layout文件就是我们包装每个文章页面的根组件，
@@ -135,7 +135,7 @@ export default {
 
 以上，基本就完成了，下面来扯一下 gitalk 是怎么工作的，在这都是在排查问题的过程中摸索出来的。
 
-# Gitalk工作原理（bug解析）
+## Gitalk工作原理（bug解析）
 1. Gitalk 会根据配置中的 ID 和 Labels 来获取 配置中 repo 所指向的项目的一个 issue，
 2. 如果没有，则显示找不到issue。这时候，如果你是本人账号，并且createIssueManually 配置是 true 则有一个初始化的按钮，点击一下，就会自动建一个issue，后续的评论都会在这个issue下面。如果 createIssueManually 配置是false，则会自动初始化一个issue。
 3. 这个issue会使用当前页面的 title作为名字，用配置中的 id 和 Labels 作为标签。
