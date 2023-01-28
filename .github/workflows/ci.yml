@@ -17,7 +17,7 @@ jobs:
           npm install
           npm run build
 
-      - name: Build and Deploy
+      - name: Deploy Github Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist
@@ -25,3 +25,8 @@ jobs:
           ssh-key: ${{ secrets.DEPLOY_KEY }}
           branch: main
           repository-name: lesonky/lesonky.github.io
+
+      - name: Invoke Cloudflare Webhook
+        uses: distributhor/workflow-webhook@v2
+        env:
+          webhook_url: ${{ secrets.CLOUDFLARE_WEBHOOK_URL }}

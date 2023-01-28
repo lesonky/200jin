@@ -59,6 +59,11 @@ jobs:
           ssh-key: ${{ secrets.DEPLOY_KEY }} # 这里就是第四步添加的参数
           branch: main
           repository-name: ************************ # 替换成自己 blog 仓库,如 username/username.github.io
+
+      - name: Invoke Cloudflare Webhook
+        uses: distributhor/workflow-webhook@v2
+        env:
+          webhook_url: ${{ secrets.CLOUDFLARE_WEBHOOK_URL }}
 ```
 
 脚本解析:
@@ -67,5 +72,10 @@ jobs:
 3. 首先拉取代码
 4. 安装依赖,`buid`
 5. 把`buid`的结果推送到`repository-name`配置的仓库中
+6. 触发cloudflare的webhook,同步更新cloudflare的pages
+
+:::info 触发cloudflare webhook
+我在cloudflare上做了一个备份,而且cloudflare的pages服务速度更快,为了同步,我在脚本的结尾加了一步,触发cloudflare 的webhook,这样就能保证同步了
+:::
 
 在加一个评论功能,Blog就全了,下一篇,我们来通过 Gitalk 加上评论功能
