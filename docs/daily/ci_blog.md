@@ -64,6 +64,7 @@ jobs:
         uses: distributhor/workflow-webhook@v2
         env:
           webhook_url: ${{ secrets.CLOUDFLARE_WEBHOOK_URL }}
+          webhook_secret: "Y0uR5ecr3t"
 ```
 
 脚本解析:
