@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  gitalk: lesonky/gitalk
+  gitalk: git://github.com/lesonky/gitalk.git
   sass: ^1.56.1
   vitepress: 1.0.0-alpha.30
   vue: ^3.2.45
@@ -17,7 +17,7 @@ devDependencies:
 packages:
 
   github.com/lesonky/gitalk/87af8b0edd6e2a7f655e05c4cf7f90883574c8ab:
-    resolution: {tarball: https://codeload.github.com/lesonky/gitalk/tar.gz/87af8b0edd6e2a7f655e05c4cf7f90883574c8ab}
+    resolution: {commit: 87af8b0edd6e2a7f655e05c4cf7f90883574c8ab, repo: git+ssh://git@github.com/lesonky/gitalk.git, type: git}
     name: gitalk
     version: 1.7.2
     dependencies:
