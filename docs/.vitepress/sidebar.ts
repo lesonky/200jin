@@ -24,6 +24,7 @@ export default function buildSidebar() {
         collapsible: true,
         items: [
           { text: "新手指南", link: "/daily/gws/buy_gws" },
+          { text: "选择合适您的订阅版本", link: "/daily/gws/subscriptions_detail" },
           { text: "如何购买域名", link: "/daily/gws/reg_domain" },
           { text: "如何通过 GWS 域名认证", link: "/daily/gws/dns_setting" },
         ],
